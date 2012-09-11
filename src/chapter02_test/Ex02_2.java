@@ -1,5 +1,7 @@
 package chapter02_test;
 
+import java.util.Random;
+
 public class Ex02_2 {
 	static boolean[] lottoTable = new boolean[45];
 	
@@ -15,7 +17,8 @@ public class Ex02_2 {
 	}
 
 	private static void createNum() {
-		int num = (int) (Math.random()*45);
+		Random rnd = new Random();
+		int num = rnd.nextInt(45);
 		if(!lottoTable[num]) lottoTable[num]=true;
 		else createNum();
 	}

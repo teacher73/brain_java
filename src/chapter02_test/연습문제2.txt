@@ -34,7 +34,8 @@ sum = 150
 		}
 	
 		private static void createNum() {
-			int num = (int) (Math.random()*45);
+			Random rnd = new Random();
+			int num = rnd.nextInt(45);
 			
 			/*
 			알맞은 코드를 넣어 완성하시오
