@@ -230,8 +230,14 @@ money = 2680
 				*/
 			}
 			System.out.println("============================");
-			System.out.printf("%3.1f \t%3.1f\t%3.1f\t%3.1f\t%3.1f",
-					totKor/table.length,totEng/table.length, totMath/table.length, totSum/table.length, totAvg/table.length);
+			System.out.printf(
+					"%3.1f \t%3.1f\t%3.1f\t%3.1f\t%3.1f",
+					totKor/table.length,
+					totEng/table.length, 
+					totMath/table.length, 
+					totSum/table.length, 
+					totAvg/table.length
+					);
 			
 		}
 	}
