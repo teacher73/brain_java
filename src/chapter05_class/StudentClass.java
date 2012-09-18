@@ -39,7 +39,7 @@ public class StudentClass {
 	}
 
 	public void delStudent(int idx) {
-		stdClass.remove(idx);
+		stdClass.remove(idx-1);
 		setSubjectTotal();
 	}
 
@@ -77,11 +77,11 @@ public class StudentClass {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		Formatter f = new Formatter(sb);
-		for (Student std : stdClass) {
-			sb.append(std);
+		for(int i=0; i<stdClass.size();i++){
+			sb.append((i+1)+"\t" + stdClass.get(i));
 		}
-		sb.append("============================================\n");
-		f.format("%s\t%3.1f\t%3.1f\t%3.1f\t%3.1f\t%3.1f\n", 
+		sb.append("=====================================================\n");
+		f.format("%s\t\t%3.1f\t%3.1f\t%3.1f\t%3.1f\t%3.1f\n", 
 				"통계", classKorTotal, classEngTotal, classMathTotal, classSumTotal, classAvgTotal);
 		return sb.toString();
 	}
