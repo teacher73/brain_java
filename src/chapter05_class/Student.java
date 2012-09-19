@@ -140,8 +140,5 @@ public class Student {
 		if (stdName.equals(std.getStdName()))return true;
 		else return false;
 	}
-
-
-
 	
 }
