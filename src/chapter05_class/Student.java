@@ -27,6 +27,9 @@ public class Student {
 	private float sumScore;
 	private float avgScore;
 	
+	public Student(String stdName){
+		this.stdName = stdName;
+	}
 	/**
 	 * Constructor of Student.java class
 	 * @param stdName 학생명
@@ -34,6 +37,7 @@ public class Student {
 	 * @param engScore 영어점수(0~100)
 	 * @param mathScore 수학점수(0~100)
 	 */
+	
 	public Student(String stdName, float korScore, float engScore, float mathScore) {
 		this.stdName = stdName;
 		this.korScore = korScore;
@@ -120,12 +124,24 @@ public class Student {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		Formatter f = new Formatter(sb);
+
 		f.format("%s\t%3.1f\t%3.1f\t%3.1f\t%3.1f\t%3.1f\n",
 				this.stdName,this.korScore, this.engScore, this.mathScore,
 				this.sumScore, this.avgScore);
 
 		return sb.toString();
 	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (!(obj instanceof Student)) return false;
+		Student std=(Student)obj;
+		
+		if (stdName.equals(std.getStdName()))return true;
+		else return false;
+	}
+
+
 
 	
 }

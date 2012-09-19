@@ -33,15 +33,11 @@ public class Sungjuk {
 					Integer.parseInt(dat[2]),
 					Integer.parseInt(dat[3])));
 		}
-		/*prnClass(sc01);
-		sc01.addStudent(new Student("태연", 91.1f,92.1f,93.4f));
-		System.out.println();System.out.println();
 		prnClass(sc01);
-		sc01.delStudent(1);
-		prnClass(sc01);*/
+		
 		boolean man=true;
 		while(man){
-			System.out.println("작업 번호를 입력하세요 1)추가 2)삭제 3)출력 4)종료");
+			System.out.println("작업 번호를 입력하세요 1)추가 2)삭제 3)검색 4)출력 5)종료");
 			int num = sc.nextInt();
 			switch(num){
 			case 1: 
@@ -51,6 +47,8 @@ public class Sungjuk {
 				delStudent(sc01);
 				break;
 			case 3:
+				searchStudent(sc01);
+			case 4:
 				prnClass(sc01);
 				break;
 			default:
@@ -61,6 +59,20 @@ public class Sungjuk {
 		sc.close();
 	}
 	
+	public static void searchStudent(StudentClass sc01){
+		System.out.println("검색하고자하는 학생이릉을 입력");
+		Scanner sc = new Scanner(System.in);
+		String stdName = sc.next();
+		Student std = new Student(stdName);
+		if (sc01.findStudent(std)){
+			int idx = sc01.idxStudent(std);
+			System.out.println("찾았습니다.\n");
+			System.out.println(sc01.getStudent(idx));
+		}else{
+			System.out.println("해당 학생이 없습니다.\n");
+		}
+		
+	}
 	public static void delStudent(StudentClass sc01) {
 		System.out.println("삭제하고자하는 번호를 입력");
 		Scanner sc = new Scanner(System.in);

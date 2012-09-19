@@ -47,6 +47,13 @@ public class StudentClass {
 		return stdClass.get(idx);
 	}
 
+	public boolean findStudent(Student std){
+		return stdClass.contains(std);
+	}
+	
+	public int idxStudent(Student std){
+		return stdClass.indexOf(std);
+	}
 	public void setSubjectTotal() {
 		initTotal();
 		for (Student std : stdClass) {
@@ -77,10 +84,11 @@ public class StudentClass {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		Formatter f = new Formatter(sb);
+
 		for(int i=0; i<stdClass.size();i++){
-			sb.append((i+1)+"\t" + stdClass.get(i));
+			f.format("%4d\t%s" ,(i+1),stdClass.get(i));
 		}
-		sb.append("=====================================================\n");
+		f.format("=====================================================\n");
 		f.format("%s\t\t%3.1f\t%3.1f\t%3.1f\t%3.1f\t%3.1f\n", 
 				"통계", classKorTotal, classEngTotal, classMathTotal, classSumTotal, classAvgTotal);
 		return sb.toString();
