@@ -20,7 +20,6 @@ package chapter05_wrapper;
 public class Wrapper {
 	public static void main(String[] args){
 		Integer obj =new Integer(4);
-		Integer obj1 = new Integer(5);
 		
 	}
 
