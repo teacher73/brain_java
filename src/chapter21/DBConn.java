@@ -10,18 +10,15 @@
 
 package chapter21;
 
-import org.apache.log4j.Logger;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
-import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Statement;
+
+import org.apache.log4j.Logger;
 
 /**
  * 
@@ -74,42 +71,6 @@ public class DBConn {
 	
 	public Connection getConn(){
 		return this.conn;
-	}
-	
-	public Statement getStmt(){
-		Statement stmt = null;
-		try {
-			stmt = conn.createStatement();
-		} catch (SQLException e) {
-			if (logger.isDebugEnabled()) {
-				logger.debug("getStmt() - Statement 객체 생성 실패");
-			}
-		}
-		return stmt;
-	}
-	
-	public PreparedStatement getPstmt(String query){
-		PreparedStatement pstmt = null;
-		try {
-			pstmt = conn.prepareStatement(query);
-		} catch (SQLException e) {
-			if (logger.isDebugEnabled()) {
-				logger.debug("getPstmt(String) - PreparedStatement 객체 생성 실패");
-			}
-		}
-		return pstmt;
-	}
-	
-	public CallableStatement getCstmt(String procedure){
-		CallableStatement cstmt = null;
-		try {
-			cstmt = conn.prepareCall(procedure);
-		} catch (SQLException e) {
-			if (logger.isDebugEnabled()) {
-				logger.debug("getCstmt(String) - CallableStatement 객체 생성 실패");
-			}
-		}
-		return cstmt;
 	}
 	
 	public void close(){

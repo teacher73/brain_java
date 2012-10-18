@@ -10,6 +10,8 @@
 
 package chapter21;
 
+import java.util.ArrayList;
+
 /**
  * 
  * @author	MinSu Kim (net94@nate.com)
@@ -19,13 +21,15 @@ package chapter21;
 
 public class TestDrive {
 
-	/**
-	 * 
-	 * @param args
-	 */
-
 	public static void main(String[] args) {
-		
+		DepartmentDAO obj = new DepartmentDAO();
+		ArrayList<DepartmentDTO> list = new ArrayList<DepartmentDTO>();
+		list = obj.listDepartment();
+		for(DepartmentDTO dept : list){
+			System.out.print(dept.getDeptNo() + "\t");
+			System.out.print(dept.getDeptName() + "\t");
+			System.out.print(dept.getFloor() + "\n");
+		}
 	}
 
 }

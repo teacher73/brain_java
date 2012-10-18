@@ -12,6 +12,7 @@ package chapter21;
 
 import org.apache.log4j.Logger;
 
+import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -30,10 +31,10 @@ public class DepartmentDAO {
 	 */
 	private static final Logger logger = Logger.getLogger(DepartmentDAO.class);
 
-	private DBConn conn;
+	private Connection conn;
 
 	public DepartmentDAO() {
-		conn = DBConn.getInstance();
+		conn = DBConn.getInstance().getConn();
 	}
 
 	public boolean registerDepartment(DepartmentDTO departDto) {
@@ -41,7 +42,7 @@ public class DepartmentDAO {
 		PreparedStatement pstmt = null;
 
 		try {
-			pstmt = conn.getPstmt(query);
+			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, departDto.getDeptName());
 			pstmt.setInt(2, departDto.getFloor());
 			pstmt.executeUpdate();
@@ -56,15 +57,14 @@ public class DepartmentDAO {
 		return true;
 	}
 
-	public ArrayList<DepartmentDTO> listDepartment(String deptNo) {
+	public ArrayList<DepartmentDTO> listDepartment() {
 		ArrayList<DepartmentDTO> dptList = new ArrayList<DepartmentDTO>();
-		String query = "select deptno, deptname, floor from department where deptno = ?";
+		String query = "select deptno, deptname, floor from department";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 
 		try {
-			pstmt = conn.getPstmt(query);
-			pstmt.setString(1, deptNo);
+			pstmt = conn.prepareStatement(query);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				DepartmentDTO obj = new DepartmentDTO();
@@ -75,7 +75,7 @@ public class DepartmentDAO {
 			}
 
 		} catch (SQLException ee) {
-			logger.error("listDepartment(String) - 부서리스트 가져오기 실패!!", ee);
+			logger.error("listDepartment(String) - 부서리스트 가져오기 실패!!" + ee.getMessage());
 		} finally {
 			try { pstmt.close(); rs.close(); } catch (SQLException e) { }
 		}
@@ -86,7 +86,7 @@ public class DepartmentDAO {
 		String query = "update department set deptname = ?, floor = ? where deptno = ?";
 		PreparedStatement pstmt = null;
 		try {
-			pstmt = conn.getPstmt(query);
+			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, departDto.getDeptName());
 			pstmt.setInt(2, departDto.getFloor());
 			pstmt.setInt(3, departDto.getDeptNo());
@@ -94,7 +94,7 @@ public class DepartmentDAO {
 			pstmt.executeUpdate();
 
 		} catch (SQLException ee) {
-			logger.error("editDepartment(DepartmentDTO) - 부서 정보수정 실패!!", ee);
+			logger.error("editDepartment(DepartmentDTO) - 부서 정보수정 실패!!" + ee.getMessage());
 			return false;
 		} finally {
 			try { pstmt.close(); } catch (SQLException e) { }
@@ -106,12 +106,12 @@ public class DepartmentDAO {
 		String query = "delete from department where deptno = ?";
 		PreparedStatement pstmt = null;
 		try {
-			pstmt = conn.getPstmt(query);
+			pstmt = conn.prepareStatement(query);
 			pstmt.setString(1, deptNo);
 			pstmt.executeUpdate();
 			pstmt.close();
 		} catch (SQLException ee) {
-			logger.error("deleteDepartment(String) - 부서 삭제 실패!!", ee);
+			logger.error("deleteDepartment(String) - 부서 삭제 실패!!" + ee.getMessage());
 			return false;
 		} finally {
 			try { pstmt.close(); } catch (SQLException e) { }
