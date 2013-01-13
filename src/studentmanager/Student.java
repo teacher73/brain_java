@@ -43,16 +43,18 @@ public class Student{
 		this.korScore = korScore;
 		this.engScore = engScore;
 		this.mathScore = mathScore;
-		this.sumScore = korScore + engScore + mathScore;
-		this.avgScore = this.sumScore/3;
+		setSumScore();
+		setAvgScore();
 	}
 
 	public void setSumScore() {
 		this.sumScore = korScore + engScore + mathScore;
 	}
+	
 	public void setAvgScore() {
 		this.avgScore = (float) (getSumScore()/3.0);
 	}
+	
 	/**
 	 * @return the stdName
 	 */
@@ -136,15 +138,6 @@ public class Student{
 				this.sumScore, this.avgScore);
 		f.close();
 		return sb.toString();
-	}
-
-	@Override
-	public boolean equals(Object obj) {
-		if (!(obj instanceof Student)) return false;
-		Student std=(Student)obj;
-		
-		if (stdName.equals(std.getStdName()))return true;
-		else return false;
 	}
 	
 }
