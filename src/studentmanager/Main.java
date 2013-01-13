@@ -5,6 +5,7 @@ import java.util.Scanner;
 import studentmanager.DAO.DBResDao;
 import studentmanager.DAO.FileResDao;
 import studentmanager.DAO.ResDao;
+import studentmanager.DAO.delete.FileDelete;
 import studentmanager.DAO.insert.FileInsert;
 
 public class Main {
@@ -19,7 +20,7 @@ public class Main {
 		if (sc.nextInt() == 1) {
 			dao = new FileResDao();
 			dao.setInsertStd(new FileInsert());
-
+			dao.setDeleteStd(new FileDelete());
 		} else {
 			return new DBResDao();
 		}

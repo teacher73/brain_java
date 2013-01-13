@@ -13,6 +13,7 @@ package studentmanager.DAO;
 import java.util.ArrayList;
 
 import studentmanager.Student;
+import studentmanager.DAO.delete.DeleteStd;
 import studentmanager.DAO.insert.InsertStd;
 
 /**
@@ -24,23 +25,27 @@ import studentmanager.DAO.insert.InsertStd;
 
 public abstract class ResDao {
 	InsertStd insertStd;
+	DeleteStd deleteStd;
+	
 	ArrayList<Student> stdList;
 	
 	public abstract ArrayList<Student> readRes();
 	public abstract void writeRes(boolean append);
 	public abstract void insertStudent(Student std);
-	
-	/**
-	 * @return the insertStd
-	 */
-	public InsertStd getInsertStd() {
-		return insertStd;
-	}
+	public abstract void deleteStudent(int idx);
+
 	/**
 	 * @param insertStd the insertStd to set
 	 */
 	public void setInsertStd(InsertStd insertStd) {
 		this.insertStd = insertStd;
+	}
+
+	/**
+	 * @param deleteStd the deleteStd to set
+	 */
+	public void setDeleteStd(DeleteStd deleteStd) {
+		this.deleteStd = deleteStd;
 	}
 	
 	public void prnStdList() {

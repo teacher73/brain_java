@@ -18,13 +18,13 @@ public class StudentManger {
 		do {
 			switch (Integer.parseInt(inputKey("1.입력 2.수정 3.삭제 4.출력 5.종료"))) {
 			case 1:
-				resDao.insertStudent(getInfo("학생명,국어,영어,수학"));
+				resDao.insertStudent((Student)getInfo("학생명,국어,영어,수학"));
 				break;
 			case 2:
 				System.out.println("수정");
 				break;
 			case 3:
-				System.out.println("삭제");
+				resDao.deleteStudent((int)getInfo("학생 번호"));
 				break;
 			case 4:
 				resDao.prnStdList();
@@ -38,17 +38,20 @@ public class StudentManger {
 
 	}
 
-	private Student getInfo(String str){
+	private Object getInfo(String str){
 		String[] strDat = inputKey(str).split(",");
+		if(strDat.length ==1) return new Integer(strDat[0]);
 		if (strDat.length != 4)	return null;
-		return new Student(strDat[0],
-				Float.parseFloat(strDat[1]), Float.parseFloat(strDat[2]), Float
-						.parseFloat(strDat[3]));
+		return new Student(
+				strDat[0],
+				Float.parseFloat(strDat[1]), 
+				Float.parseFloat(strDat[2]), 
+				Float.parseFloat(strDat[3]));
 	}
 
 	private String inputKey(String str) {
 		Scanner sc = new Scanner(System.in);
-		System.out.println(str + " 입력하세요");
+		System.out.println(str + " 를(을) 입력하세요");
 		return sc.next();
 	}
 
