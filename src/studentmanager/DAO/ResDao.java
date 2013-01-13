@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import studentmanager.Student;
 import studentmanager.DAO.delete.DeleteStd;
 import studentmanager.DAO.insert.InsertStd;
+import studentmanager.DAO.update.UpdateStd;
 
 /**
  * 
@@ -26,14 +27,14 @@ import studentmanager.DAO.insert.InsertStd;
 public abstract class ResDao {
 	InsertStd insertStd;
 	DeleteStd deleteStd;
-	
+	UpdateStd updateStd;
 	ArrayList<Student> stdList;
 	
 	public abstract ArrayList<Student> readRes();
 	public abstract void writeRes(boolean append);
 	public abstract void insertStudent(Student std);
 	public abstract void deleteStudent(int idx);
-
+	public abstract void updateStudent(int idx, Student std);
 	/**
 	 * @param insertStd the insertStd to set
 	 */
@@ -48,9 +49,16 @@ public abstract class ResDao {
 		this.deleteStd = deleteStd;
 	}
 	
+	/**
+	 * @param updateStd the updateStd to set
+	 */
+	public void setUpdateStd(UpdateStd updateStd) {
+		this.updateStd = updateStd;
+	}
 	public void prnStdList() {
+		int cnt = 1;
 		for (Student std : stdList){
-			System.out.print(std);
+			System.out.print(cnt++ + " : " +  std);
 			System.out.println();
 		}
 		System.out.println();

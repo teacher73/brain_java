@@ -21,7 +21,8 @@ public class StudentManger {
 				resDao.insertStudent((Student)getInfo("학생명,국어,영어,수학"));
 				break;
 			case 2:
-				System.out.println("수정");
+				int res=Integer.parseInt(inputKey("수정할 학생 번호 입력"));
+				resDao.updateStudent(res, (Student)getInfo("학생명,국어,영어,수학"));
 				break;
 			case 3:
 				resDao.deleteStudent((int)getInfo("학생 번호"));

@@ -7,6 +7,7 @@ import studentmanager.DAO.FileResDao;
 import studentmanager.DAO.ResDao;
 import studentmanager.DAO.delete.FileDelete;
 import studentmanager.DAO.insert.FileInsert;
+import studentmanager.DAO.update.FileUpdate;
 
 public class Main {
 	public static void main(String[] args) {
@@ -21,6 +22,7 @@ public class Main {
 			dao = new FileResDao();
 			dao.setInsertStd(new FileInsert());
 			dao.setDeleteStd(new FileDelete());
+			dao.setUpdateStd(new FileUpdate());
 		} else {
 			return new DBResDao();
 		}
