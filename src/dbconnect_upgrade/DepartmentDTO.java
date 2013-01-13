@@ -8,7 +8,7 @@
  *
  */
 
-package chapter21;
+package dbconnect_upgrade;
 
 /**
  * 
@@ -80,4 +80,6 @@ public class DepartmentDTO {
 	public void setFloor(int floor) {
 		this.floor = floor;
 	}
+	
+	
 }

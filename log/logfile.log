@@ -1,0 +1,72 @@
+main> [2013-01-06 00:57:12,854][DEBUG](DBConn.java:47) - DBConn() - DB 연결 성공
+main> [2013-01-06 00:57:12,885][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 00:57:21,530][DEBUG](DepartmentDAO.java:43) - registerDepartment(DepartmentDTO) - 부서 등록 성공
+main> [2013-01-06 00:57:21,530][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 00:57:25,416][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 00:57:25,431][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 00:57:31,517][DEBUG](DepartmentDAO.java:112) - deleteDepartment(String) - 부서 정보 삭제 성공
+main> [2013-01-06 00:57:31,517][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 00:57:33,843][DEBUG](DBConn.java:80) - close() - DB 종료
+main> [2013-01-06 01:01:26,176][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:01:26,208][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:01:30,701][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:01:30,717][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:01:45,226][DEBUG](DBConn.java:81) - close() - DB 종료
+main> [2013-01-06 01:02:24,587][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:02:24,618][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:02:28,940][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:02:28,971][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:02:38,613][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:02:38,613][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:03:16,647][DEBUG](DBConn.java:81) - close() - DB 종료
+main> [2013-01-06 01:03:23,762][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:03:23,762][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:03:29,801][DEBUG](DBConn.java:81) - close() - DB 종료
+main> [2013-01-06 01:11:05,386][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:11:05,417][DEBUG](DepartmentDAO.java:72) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:11:05,417][DEBUG](DBConn.java:81) - close() - DB 종료
+main> [2013-01-06 01:17:36,013][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:17:36,044][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:17:36,059][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:18:59,537][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:18:59,569][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:18:59,569][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:19:03,391][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:19:03,391][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:19:03,391][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:19:03,422][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:19:03,422][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:19:03,422][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:20:21,661][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:20:21,695][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:20:21,699][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:20:37,541][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:20:37,556][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:20:37,556][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:20:37,572][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:20:37,572][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:20:37,572][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:21:00,647][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:21:00,647][DEBUG](DepartmentDAO.java:44) - registerDepartment(DepartmentDTO) - 부서 등록 성공
+main> [2013-01-06 01:21:00,647][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:21:00,663][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:21:00,680][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:21:00,680][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:25:08,083][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:25:08,118][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:25:08,120][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:25:10,438][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:25:10,469][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:25:10,484][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:25:23,745][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:25:23,745][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:25:23,745][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:25:23,761][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:25:23,761][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:25:23,761][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:25:43,372][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:25:43,388][DEBUG](DepartmentDAO.java:116) - deleteDepartment(String) - 부서 정보 삭제 성공
+main> [2013-01-06 01:25:43,388][DEBUG](DBConn.java:85) - close() - DB 종료
+main> [2013-01-06 01:25:43,404][DEBUG](DBConn.java:48) - DBConn() - DB 연결 성공
+main> [2013-01-06 01:25:43,404][DEBUG](DepartmentDAO.java:74) - listDepartment() - 부서리스트 가져오기  성공
+main> [2013-01-06 01:25:43,404][DEBUG](DBConn.java:85) - close() - DB 종료

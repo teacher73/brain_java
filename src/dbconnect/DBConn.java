@@ -1,4 +1,4 @@
-/**
+/*
  *
  * @package		: chapter21
  * @FileName	: DBConn.java
@@ -8,7 +8,7 @@
  *
  */
 
-package chapter21;
+package dbconnect;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -39,9 +39,10 @@ public class DBConn {
 	private String pass;
 	private Connection conn;
 
-	public DBConn() {
+	private DBConn() {
+		File data = new File("dbinfo.damil");
 		try {
-			BufferedReader in = new BufferedReader(new FileReader(new File("dbinfo.damil")));
+			BufferedReader in = new BufferedReader(new FileReader(data));
 			driver = in.readLine();
 			url = in.readLine();
 			id =in.readLine();
@@ -50,6 +51,9 @@ public class DBConn {
 			
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url, id, pass);
+			if (logger.isDebugEnabled()) {
+				logger.debug("DBConn() - DB 연결 성공");
+			}
 		} catch (IOException e) {
 		} catch (ClassNotFoundException e) {
 			if (logger.isDebugEnabled()) {
@@ -67,16 +71,19 @@ public class DBConn {
 	public static DBConn getInstance(){
 		return new DBConn();
 	}
-	
+
 	public Connection getConn(){
 		return this.conn;
 	}
 	
-	public void close(){
+	public void dbClose(){
 		if (conn != null){
 			try {
 				if (!conn.isClosed()){
 					conn.close();
+					if (logger.isDebugEnabled()) {
+						logger.debug("close() - DB 종료");
+					}
 				}
 			} catch (SQLException e) {
 				if (logger.isDebugEnabled()) {

@@ -23,8 +23,8 @@ public class TestDrive {
 
 	public static void main(String[] args) {
 		DepartmentDAO obj = new DepartmentDAO();
-		ArrayList<DepartmentDTO> list = new ArrayList<DepartmentDTO>();
-		list = obj.listDepartment();
+		//ArrayList<DepartmentDTO> list = new ArrayList<DepartmentDTO>();
+		ArrayList<DepartmentDTO> list = obj.listDepartment();
 		for(DepartmentDTO dept : list){
 			System.out.print(dept.getDeptNo() + "\t");
 			System.out.print(dept.getDeptName() + "\t");

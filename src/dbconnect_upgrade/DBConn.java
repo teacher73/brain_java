@@ -1,4 +1,4 @@
-/**
+/*
  *
  * @package		: chapter21
  * @FileName	: DBConn.java
@@ -8,15 +8,15 @@
  *
  */
 
-package chapter21;
+package dbconnect_upgrade;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
+import java.io.BufferedInputStream;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.Properties;
 
 import org.apache.log4j.Logger;
 
@@ -27,29 +27,26 @@ import org.apache.log4j.Logger;
  * @version	1.0.0
  */
 
-public class DBConn {
+public final class DBConn {
 	/**
 	 * Logger for this class
 	 */
 	private static final Logger logger = Logger.getLogger(DBConn.class);
-
-	private String driver;
-	private String url;
-	private String id;
-	private String pass;
-	private Connection conn;
-
-	public DBConn() {
+	private volatile static DBConn instance;
+	private static Connection conn;
+	
+	private DBConn() {
+		Properties props = new Properties();
 		try {
-			BufferedReader in = new BufferedReader(new FileReader(new File("dbinfo.damil")));
-			driver = in.readLine();
-			url = in.readLine();
-			id =in.readLine();
-			pass = in.readLine();
-			in.close();
-			
-			Class.forName(driver);
-			conn = DriverManager.getConnection(url, id, pass);
+			props.load(new BufferedInputStream(new FileInputStream("dbinfo.properties")));
+			Class.forName(props.getProperty("driver"));
+			conn = DriverManager.getConnection(
+					props.getProperty("url"), 
+					props.getProperty("user"), 
+					props.getProperty("pass"));
+			if (logger.isDebugEnabled()) {
+				logger.debug("DBConn() - DB 연결 성공");
+			}
 		} catch (IOException e) {
 		} catch (ClassNotFoundException e) {
 			if (logger.isDebugEnabled()) {
@@ -64,28 +61,39 @@ public class DBConn {
 		}
 	}
 	
-	public static DBConn getInstance(){
-		return new DBConn();
-	}
+	public static DBConn getInstance(){//DCL(Double-Checking Locking)
+		if(instance == null){
+			synchronized (DBConn.class) {
+				if (instance == null){
+					instance = new DBConn();
+				}
+			}
+		}
+		return instance;
+	}	
 	
-	public Connection getConn(){
-		return this.conn;
+	public static Connection getConn(){
+		return conn;
 	}
-	
-	public void close(){
+
+	public static void dbClose(){
 		if (conn != null){
 			try {
 				if (!conn.isClosed()){
 					conn.close();
+					if (logger.isDebugEnabled()) {
+						logger.debug("close() - DB 종료");
+					}
 				}
 			} catch (SQLException e) {
 				if (logger.isDebugEnabled()) {
 					logger.debug("close() - Connection 객체 해제 실패");
 				}
 			} finally{
+				instance = null;
 				conn = null;
 			}
 		}
 	}
-	
+
 }

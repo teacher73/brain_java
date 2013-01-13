@@ -1,0 +1,288 @@
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357401432854" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401432885" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401441530" level="DEBUG" thread="main">
+<log4j:message><![CDATA[registerDepartment(DepartmentDTO) - 부서 등록 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401441530" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401445416" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401445431" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401451517" level="DEBUG" thread="main">
+<log4j:message><![CDATA[deleteDepartment(String) - 부서 정보 삭제 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401451517" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357401453843" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357401686176" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401686208" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401690701" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401690717" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357401705226" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357401744587" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401744618" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357401748940" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401748971" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401758613" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401758613" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357401796647" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401803762" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357401803762" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357401809801" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402265386" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402265417" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402265417" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402656013" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402656044" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402656059" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402739537" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402739569" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402739569" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402743391" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402743391" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402743391" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402743422" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402743422" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402743422" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402821661" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402821695" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402821699" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402837541" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402837556" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402837556" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402837572" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402837572" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402837572" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402860647" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402860647" level="DEBUG" thread="main">
+<log4j:message><![CDATA[registerDepartment(DepartmentDTO) - 부서 등록 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402860647" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402860663" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357402860680" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357402860680" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403108083" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357403108118" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403108120" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403110438" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357403110469" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403110484" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403123745" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357403123745" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403123745" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403123761" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357403123761" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403123761" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403143372" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357403143388" level="DEBUG" thread="main">
+<log4j:message><![CDATA[deleteDepartment(String) - 부서 정보 삭제 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403143388" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403143404" level="DEBUG" thread="main">
+<log4j:message><![CDATA[DBConn() - DB 연결 성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DepartmentDAO" timestamp="1357403143404" level="DEBUG" thread="main">
+<log4j:message><![CDATA[listDepartment() - 부서리스트 가져오기  성공]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="dbconnect_upgrade.DBConn" timestamp="1357403143404" level="DEBUG" thread="main">
+<log4j:message><![CDATA[close() - DB 종료]]></log4j:message>
+</log4j:event>
+
