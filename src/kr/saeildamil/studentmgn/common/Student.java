@@ -10,10 +10,6 @@
 
 package kr.saeildamil.studentmgn.common;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.io.Serializable;
 import java.util.Formatter;
 
 /**
@@ -47,8 +43,8 @@ public class Student{
 		this.korScore = korScore;
 		this.engScore = engScore;
 		this.mathScore = mathScore;
-		this.sumScore = korScore + engScore + mathScore;
-		this.avgScore = this.sumScore/3;
+		setSumScore();
+		setAvgScore();
 	}
 
 	public void setSumScore() {
@@ -142,13 +138,4 @@ public class Student{
 		return sb.toString();
 	}
 
-	@Override
-	public boolean equals(Object obj) {
-		if (!(obj instanceof Student)) return false;
-		Student std=(Student)obj;
-		
-		if (stdName.equals(std.getStdName()))return true;
-		else return false;
-	}
-	
 }
