@@ -13,7 +13,6 @@ public class StudentManager {
 
 	public StudentManager(Conn con) {
 		this.con = con;
-		this.con.openCon();
 		this.con.prnStdList();
 		menu();
 	}

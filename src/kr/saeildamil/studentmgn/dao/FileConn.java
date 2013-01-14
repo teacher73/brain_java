@@ -25,6 +25,8 @@ public class FileConn extends Conn {
 		setInsStd(new FileInsertStudent());
 		setUpStd(new FileUpdateStudent());
 		setDelStd(new FileDeleteStudent());
+		
+		openCon();
 	}
 
 	@Override
@@ -81,7 +83,6 @@ public class FileConn extends Conn {
 	@Override
 	public void insertStudent(Student std) {
 		insStd.insertStudent(stdList, std);
-		
 	}
 
 	@Override
@@ -94,5 +95,8 @@ public class FileConn extends Conn {
 		delStd.deleteStudent(stdList, idx);
 	}
 
-
+	@Override
+	public void selectStudent() {
+		selStd.selectStudent(stdList);		
+	}
 }
