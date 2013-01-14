@@ -8,20 +8,14 @@ import kr.saeildamil.studentmgn.dao.delete.FileDeleteStudent;
 import kr.saeildamil.studentmgn.dao.insert.FileInsertStudent;
 import kr.saeildamil.studentmgn.dao.update.FileUpdateStudent;
 
-public class StudentManger {
+public class StudentManager {
 	Conn con;
 
-	public StudentManger(Conn con) {
+	public StudentManager(Conn con) {
 		this.con = con;
-		init();
-		menu();
-	}
-	private void init(){
-		this.con.setInsStd(new FileInsertStudent());
-		this.con.setUpStd(new FileUpdateStudent());
-		this.con.setDelStd(new FileDeleteStudent());
 		this.con.openCon();
 		this.con.prnStdList();
+		menu();
 	}
 
 	private void menu() {

@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 import kr.saeildamil.studentmgn.common.Student;
+import kr.saeildamil.studentmgn.dao.delete.FileDeleteStudent;
+import kr.saeildamil.studentmgn.dao.insert.FileInsertStudent;
+import kr.saeildamil.studentmgn.dao.update.FileUpdateStudent;
 
 public class FileConn extends Conn {
 	private File file;
@@ -19,6 +22,9 @@ public class FileConn extends Conn {
 	
 	public FileConn() {
 		file = new File(filepath);
+		setInsStd(new FileInsertStudent());
+		setUpStd(new FileUpdateStudent());
+		setDelStd(new FileDeleteStudent());
 	}
 
 	@Override
