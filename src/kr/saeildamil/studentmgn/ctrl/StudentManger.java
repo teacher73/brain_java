@@ -1,4 +1,4 @@
-package studentmanager;
+package kr.saeildamil.studentmgn.ctrl;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -11,6 +11,8 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.StringTokenizer;
+
+import kr.saeildamil.studentmgn.common.Student;
 
 public class StudentManger {
 	ArrayList<Student> stdList;
