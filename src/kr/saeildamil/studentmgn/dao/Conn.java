@@ -33,6 +33,7 @@ public abstract class Conn {
 	public void setDelStd(DeleteStudent delStd) {
 		this.delStd = delStd;
 	}
+	
 	public void prnStdList() {
 		int idx = 1;
 		for (Student std : stdList){
