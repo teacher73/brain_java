@@ -83,5 +83,10 @@ public class FileConn extends Conn {
 		upStd.updateStudent(stdList, idx, std);		
 	}
 
+	@Override
+	public void deleteStudent(int idx) {
+		delStd.deleteStudent(stdList, idx);
+	}
+
 
 }

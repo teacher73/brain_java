@@ -30,7 +30,7 @@ public class StudentManger {
 				con.updateStudent(Integer.parseInt(inputKey("수정 할 학생 번호")), registerStd(inputKey("학생명,국어,영어,수학")));
 				break;
 			case 3:
-				unregisterStd(inputKey("삭제 할 학생 번호"));
+				con.deleteStudent(Integer.parseInt(inputKey("삭제 할 학생 번호"))-1);
 				break;
 			case 4:
 				con.prnStdList();
@@ -42,11 +42,6 @@ public class StudentManger {
 			}
 		} while (!isFinish);
 
-	}
-
-
-	private void unregisterStd(String str) {
-		this.con.getStdList().remove(Integer.parseInt(str) - 1);
 	}
 
 	private Student registerStd(String str) {
