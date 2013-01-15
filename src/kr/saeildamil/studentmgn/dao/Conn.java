@@ -15,21 +15,6 @@ public abstract class Conn {
 	abstract public void openCon();
 	abstract public void closeCon();
 	
-	public void setInsStd(InsertStudent insStd) {
-		this.insStd = insStd;
-	}
-	
-	public void setUpStd(UpdateStudent upStd) {
-		this.upStd = upStd;
-	}
-	
-	public void setDelStd(DeleteStudent delStd) {
-		this.delStd = delStd;
-	}
-	
-	public void setSelStd(SelectStudent selStd) {
-		this.selStd = selStd;
-	}
 	public InsertStudent getInsStd() {
 		return insStd;
 	}
