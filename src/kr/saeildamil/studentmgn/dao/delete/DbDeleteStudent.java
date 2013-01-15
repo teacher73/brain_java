@@ -1,8 +1,5 @@
 package kr.saeildamil.studentmgn.dao.delete;
 
-import java.util.ArrayList;
-
-import kr.saeildamil.studentmgn.common.Student;
 
 public class DbDeleteStudent implements DeleteStudent {
 
