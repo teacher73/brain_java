@@ -17,6 +17,7 @@ public class StudentManager {
 		boolean isFinish = false;
 		con.getSelStd().selectStudent();
 		do {
+			
 			switch (Integer.parseInt(inputKey("1.입력 2.수정 3.삭제 4.출력 5.종료"))) {
 			case 1:
 				con.getInsStd().insertStudent(registerStd(inputKey("학생명,국어,영어,수학")));
