@@ -8,7 +8,7 @@
  *
  */
 
-package studentmanager;
+package kr.saeildamil.studentmgn.common;
 
 import java.util.Formatter;
 
@@ -50,11 +50,9 @@ public class Student{
 	public void setSumScore() {
 		this.sumScore = korScore + engScore + mathScore;
 	}
-	
 	public void setAvgScore() {
 		this.avgScore = (float) (getSumScore()/3.0);
 	}
-	
 	/**
 	 * @return the stdName
 	 */
@@ -139,5 +137,5 @@ public class Student{
 		f.close();
 		return sb.toString();
 	}
-	
+
 }
