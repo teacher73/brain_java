@@ -13,19 +13,18 @@ public class DBConn extends Conn {
 	private Connection conn;
 	
 	private DBConn() {
+		DbOpenDao openDbDao = new DbOpenDao();
+		conn = openDbDao.getConn();
+		openDao = openDbDao;
 		insStd = new DbInsertStudent();
 		upStd = new DbUpdateStudent();
 		delStd = new DbDeleteStudent();
-		selStd = new DbSelectStudent();	
-		openDao = new DbOpenDao(conn);
-		openDao.openRes();
+		selStd = new DbSelectStudent(conn);	
 		closeDao = new DbCloseDao(conn);
 	}
 	
 	public static DBConn getInstance(){
 		return new DBConn();
 	}
-	
-
 
 }

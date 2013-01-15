@@ -18,8 +18,8 @@ public class DbOpenDao implements OpenDao {
 	
 	private final String filepath = "StudentInfo.damil";
 	
-	public DbOpenDao(Connection conn) {
-		this.conn = conn;
+	public DbOpenDao() {
+		openRes();
 	}
 
 	@Override
