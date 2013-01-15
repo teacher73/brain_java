@@ -8,9 +8,9 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-import kr.saeildamil.studentmgn.common.Student;
 import kr.saeildamil.studentmgn.dao.delete.DbDeleteStudent;
 import kr.saeildamil.studentmgn.dao.insert.DbInsertStudent;
+import kr.saeildamil.studentmgn.dao.select.DbSelectStudent;
 import kr.saeildamil.studentmgn.dao.update.DbUpdateStudent;
 
 public class DBConn extends Conn {
@@ -23,7 +23,7 @@ public class DBConn extends Conn {
 	
 	private final String filepath = "StudentInfo.damil";
 	
-	public DBConn() {
+	private DBConn() {
 		file = new File(filepath);
 		BufferedReader in = null;
 		try {
@@ -48,9 +48,10 @@ public class DBConn extends Conn {
 	}
 	
 	private void init(){
-		setInsStd(new DbInsertStudent());
-		setUpStd(new DbUpdateStudent());
-		setDelStd(new DbDeleteStudent());
+		insStd = new DbInsertStudent();
+		upStd = new DbUpdateStudent();
+		delStd = new DbDeleteStudent();
+		selStd = new DbSelectStudent();	
 		openCon();
 	}
 
@@ -64,7 +65,7 @@ public class DBConn extends Conn {
 
 	@Override
 	public void openCon() {
-		selectStudent();
+		selStd.selectStudent();
 	}
 
 	@Override
@@ -80,26 +81,6 @@ public class DBConn extends Conn {
 				conn = null;
 			}
 		}
-	}
-
-	@Override
-	public void insertStudent(Student std) {
-		insStd.insertStudent(stdList, std);
-	}
-
-	@Override
-	public void updateStudent(int idx, Student std) {
-		upStd.updateStudent(stdList, idx, std);		
-	}
-
-	@Override
-	public void deleteStudent(int idx) {
-		delStd.deleteStudent(stdList, idx);
-	}
-
-	@Override
-	public void selectStudent() {
-		selStd.selectStudent(stdList);		
 	}
 
 }

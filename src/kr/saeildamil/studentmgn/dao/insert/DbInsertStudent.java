@@ -7,7 +7,7 @@ import kr.saeildamil.studentmgn.common.Student;
 public class DbInsertStudent implements InsertStudent {
 
 	@Override
-	public void insertStudent(ArrayList<Student> stdList,Student std) {
+	public void insertStudent(Student std) {
 		// TODO Auto-generated method stub
 
 	}

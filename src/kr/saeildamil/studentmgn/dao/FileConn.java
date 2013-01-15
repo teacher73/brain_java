@@ -18,18 +18,23 @@ import kr.saeildamil.studentmgn.dao.select.FileSelectStudent;
 import kr.saeildamil.studentmgn.dao.update.FileUpdateStudent;
 
 public class FileConn extends Conn {
+	protected ArrayList<Student> stdList;
 	private File file;
 	private final String filepath = "StudentList.data"; 
 	
-	public FileConn() {
+	private FileConn() {
 		file = new File(filepath);
-		setInsStd(new FileInsertStudent());
-		setUpStd(new FileUpdateStudent());
-		setDelStd(new FileDeleteStudent());
-		setSelStd(new FileSelectStudent());
 		openCon();
+		insStd = new FileInsertStudent(stdList);
+		upStd = new FileUpdateStudent(stdList);
+		delStd = new FileDeleteStudent(stdList);
+		selStd = new FileSelectStudent(stdList);	
 	}
-
+	
+	public static FileConn getInstance(){
+		return new FileConn();
+	}
+	
 	@Override
 	public void openCon() {
 		if (!file.exists())
@@ -81,23 +86,4 @@ public class FileConn extends Conn {
 		}		
 	}
 
-	@Override
-	public void insertStudent(Student std) {
-		insStd.insertStudent(stdList, std);
-	}
-
-	@Override
-	public void updateStudent(int idx, Student std) {
-		upStd.updateStudent(stdList, idx, std);		
-	}
-
-	@Override
-	public void deleteStudent(int idx) {
-		delStd.deleteStudent(stdList, idx);
-	}
-
-	@Override
-	public void selectStudent() {
-		selStd.selectStudent(stdList);		
-	}
 }

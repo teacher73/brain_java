@@ -5,5 +5,5 @@ import java.util.ArrayList;
 import kr.saeildamil.studentmgn.common.Student;
 
 public interface InsertStudent {
-	void insertStudent(ArrayList<Student> stdList,Student std);
+	void insertStudent(Student std);
 }

@@ -5,9 +5,14 @@ import java.util.ArrayList;
 import kr.saeildamil.studentmgn.common.Student;
 
 public class FileInsertStudent implements InsertStudent{
+	ArrayList<Student> stdList;
+	
+	public FileInsertStudent(ArrayList<Student> stdList) {
+		this.stdList = stdList;
+	}
 
 	@Override
-	public void insertStudent(ArrayList<Student> stdList, Student std) {
+	public void insertStudent(Student std) {
 		stdList.add(std);
 	}
 

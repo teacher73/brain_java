@@ -9,9 +9,9 @@ import kr.saeildamil.studentmgn.dao.FileConn;
 public class Main {
 	public static void main(String[] args) {
 		if (question()==1)
-			new StudentManager(new FileConn());
+			new StudentManager(FileConn.getInstance());
 		else
-			new StudentManager(new DBConn());
+			new StudentManager(DBConn.getInstance());
 	}
 	
 	public static int question(){

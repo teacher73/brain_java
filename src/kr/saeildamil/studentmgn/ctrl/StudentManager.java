@@ -15,20 +15,20 @@ public class StudentManager {
 
 	private void menu() {
 		boolean isFinish = false;
-		con.selectStudent();
+		con.getSelStd().selectStudent();
 		do {
 			switch (Integer.parseInt(inputKey("1.입력 2.수정 3.삭제 4.출력 5.종료"))) {
 			case 1:
-				con.insertStudent(registerStd(inputKey("학생명,국어,영어,수학")));
+				con.getInsStd().insertStudent(registerStd(inputKey("학생명,국어,영어,수학")));
 				break;
 			case 2:
-				con.updateStudent(Integer.parseInt(inputKey("수정 할 학생 번호"))-1, registerStd(inputKey("학생명,국어,영어,수학")));
+				con.getUpStd().updateStudent(Integer.parseInt(inputKey("수정 할 학생 번호"))-1, registerStd(inputKey("학생명,국어,영어,수학")));
 				break;
 			case 3:
-				con.deleteStudent(Integer.parseInt(inputKey("삭제 할 학생 번호"))-1);
+				con.getDelStd().deleteStudent(Integer.parseInt(inputKey("삭제 할 학생 번호"))-1);
 				break;
 			case 4:
-				con.selectStudent();
+				con.getSelStd().selectStudent();
 				break;
 			default:
 				isFinish = true;
