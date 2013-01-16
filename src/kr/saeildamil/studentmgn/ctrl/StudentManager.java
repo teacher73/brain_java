@@ -33,7 +33,7 @@ public class StudentManager {
 				break;
 			default:
 				isFinish = true;
-				con.getCloseDao().closeRes();
+				con.closeConn();
 				break;
 			}
 		} while (!isFinish);

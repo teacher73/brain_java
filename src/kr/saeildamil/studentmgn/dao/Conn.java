@@ -1,9 +1,7 @@
 package kr.saeildamil.studentmgn.dao;
 
-import kr.saeildamil.studentmgn.dao.close.CloseDao;
 import kr.saeildamil.studentmgn.dao.delete.DeleteStudent;
 import kr.saeildamil.studentmgn.dao.insert.InsertStudent;
-import kr.saeildamil.studentmgn.dao.open.OpenDao;
 import kr.saeildamil.studentmgn.dao.select.SelectStudent;
 import kr.saeildamil.studentmgn.dao.update.UpdateStudent;
 
@@ -13,9 +11,9 @@ public abstract class Conn {
 	protected UpdateStudent upStd;
 	protected DeleteStudent delStd;
 	protected SelectStudent selStd;
-	protected OpenDao openDao;
-	protected CloseDao closeDao;
-
+	
+	abstract public void openConn();
+	abstract public void closeConn();
 	
 	public InsertStudent getInsStd() {
 		return insStd;
@@ -29,11 +27,6 @@ public abstract class Conn {
 	public SelectStudent getSelStd() {
 		return selStd;
 	}
-	public OpenDao getOpenDao() {
-		return openDao;
-	}
-	public CloseDao getCloseDao() {
-		return closeDao;
-	}
+
 	
 }
