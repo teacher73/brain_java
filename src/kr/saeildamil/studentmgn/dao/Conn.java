@@ -6,7 +6,6 @@ import kr.saeildamil.studentmgn.dao.select.SelectStudent;
 import kr.saeildamil.studentmgn.dao.update.UpdateStudent;
 
 public abstract class Conn {
-
 	protected InsertStudent insStd;
 	protected UpdateStudent upStd;
 	protected DeleteStudent delStd;
@@ -28,5 +27,4 @@ public abstract class Conn {
 		return selStd;
 	}
 
-	
 }

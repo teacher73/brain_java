@@ -11,10 +11,25 @@ public class FileSelectStudent implements SelectStudent {
 		this.stdList = stdList;
 	}
 	@Override
-	public void selectStudent() {
+	public void listStudent() {
 		int idx = 1;
 		for (Student std : stdList){
 			System.out.print(idx++ + " : " + std);
+			System.out.println();
+		}
+		System.out.println();
+	}
+	@Override
+	public void selectStudent(int idx) {
+		if (stdList.contains(stdList.get(idx-1))){
+			System.out.println(stdList.get(idx-1));
+		}
+	}
+	@Override
+	public void listStdName() {
+		int idx = 1;
+		for (Student std : stdList){
+			System.out.print(idx++ + " : " + std.getStdName());
 			System.out.println();
 		}
 		System.out.println();

@@ -14,10 +14,6 @@ import kr.saeildamil.studentmgn.dao.select.DbSelectStudent;
 import kr.saeildamil.studentmgn.dao.update.DbUpdateStudent;
 
 public class DBConn extends Conn {
-	private String driver;
-	private String url;
-	private String id;
-	private String pass;
 	private Connection conn;
 	private File file;
 	
@@ -44,12 +40,8 @@ public class DBConn extends Conn {
 		BufferedReader in = null;
 		try {
 			in = new BufferedReader(new FileReader(file));
-			driver = in.readLine();
-			url = in.readLine();
-			id =in.readLine();
-			pass = in.readLine();
-			Class.forName(driver);
-			conn = DriverManager.getConnection(url, id, pass);
+			Class.forName(in.readLine());
+			conn = DriverManager.getConnection(in.readLine(), in.readLine(), in.readLine());
 			System.out.println("openConn() - Success");
 		} catch (IOException e) {
 		} catch (ClassNotFoundException e) {
@@ -76,8 +68,6 @@ public class DBConn extends Conn {
 				conn = null;
 			}
 		}
-
 	}
-
 
 }
