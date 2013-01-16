@@ -1,6 +1,5 @@
 package kr.saeildamil.studentmgn.dao.insert;
 
-import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -8,11 +7,6 @@ import kr.saeildamil.studentmgn.common.Student;
 import kr.saeildamil.studentmgn.dao.DBConn;
 
 public class DbInsertStudent implements InsertStudent {
-	Connection conn;
-
-	public DbInsertStudent(Connection conn) {
-		this.conn = conn;
-	}
 	
 	@Override
 	public void insertStudent(Student std) {
@@ -27,7 +21,7 @@ public class DbInsertStudent implements InsertStudent {
 			pstmt.setFloat(i++, std.getEngScore());
 			pstmt.setFloat(i++, std.getMathScore());
 			pstmt.setFloat(i++, std.getSumScore());
-			
+			pstmt.setFloat(i++, std.getAvgScore());
 			pstmt.executeUpdate();
 			System.out.println("insertStudent(Student std) - 학생 등록 성공");
 

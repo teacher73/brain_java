@@ -23,10 +23,10 @@ public class StudentManager {
 				con.getInsStd().insertStudent(registerStd(inputKey("학생명,국어,영어,수학")));
 				break;
 			case 2:
-				con.getUpStd().updateStudent(Integer.parseInt(inputKey("수정 할 학생 번호"))-1, registerStd(inputKey("학생명,국어,영어,수학")));
+				con.getUpStd().updateStudent(Integer.parseInt(inputKey("수정 할 학생 번호")), registerStd(inputKey("학생명,국어,영어,수학")));
 				break;
 			case 3:
-				con.getDelStd().deleteStudent(Integer.parseInt(inputKey("삭제 할 학생 번호"))-1);
+				con.getDelStd().deleteStudent(Integer.parseInt(inputKey("삭제 할 학생 번호")));
 				break;
 			case 4:
 				con.getSelStd().selectStudent();

@@ -12,7 +12,7 @@ public class FileDeleteStudent implements DeleteStudent{
 	}
 	@Override
 	public void deleteStudent(int idx) {
-		stdList.remove(idx);
+		stdList.remove(idx-1);
 	}
 
 }

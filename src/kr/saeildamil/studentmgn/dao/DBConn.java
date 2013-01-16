@@ -25,10 +25,10 @@ public class DBConn extends Conn {
 	
 	private DBConn() {
 		openConn();
-		insStd = new DbInsertStudent(conn);
+		insStd = new DbInsertStudent();
 		upStd = new DbUpdateStudent();
 		delStd = new DbDeleteStudent();
-		selStd = new DbSelectStudent(conn);	
+		selStd = new DbSelectStudent();	
 	}
 	
 	public static DBConn getInstance(){
@@ -38,7 +38,6 @@ public class DBConn extends Conn {
 	public Connection getConn() {
 		return conn;
 	}	
-	
 	
 	public void openConn() {
 		file = new File(filepath);
@@ -51,12 +50,13 @@ public class DBConn extends Conn {
 			pass = in.readLine();
 			Class.forName(driver);
 			conn = DriverManager.getConnection(url, id, pass);
+			System.out.println("openConn() - Success");
 		} catch (IOException e) {
 		} catch (ClassNotFoundException e) {
-			System.out.println("DBConn() - DB 검색 실패");
+			System.out.println("openConn() - DB 검색 실패");
 			System.exit(-1);
 		} catch (SQLException e) {
-			System.out.println("DBConn() - Connection 객체 생성 실패");
+			System.out.println("openConn() - Connection 객체 생성 실패");
 			System.exit(-1);// -1인 경우 비정상 종료로 컴퓨터가 인식
 		} finally{
 			try {in.close();} catch (IOException e) {}
@@ -68,9 +68,10 @@ public class DBConn extends Conn {
 			try {
 				if (!conn.isClosed()){
 					conn.close();
+					System.out.println("closeConn() - Connection 객체 해제");
 				}
 			} catch (SQLException e) {
-				System.out.println("close() - Connection 객체 해제 실패");
+				System.out.println("closeConn() - Connection 객체 해제 실패");
 			} finally{
 				conn = null;
 			}

@@ -12,7 +12,7 @@ public class FileUpdateStudent implements UpdateStudent{
 	}
 	@Override
 	public void updateStudent(int idx, Student std) {
-		stdList.set(idx, std);
+		stdList.set(idx-1, std);
 	}
 
 }
